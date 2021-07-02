@@ -29,11 +29,11 @@ call plug#begin('~/.config/nvim/autoload/plugged')
             \ } 
     " vim-go
     Plug 'fatih/vim-go', { 'do': ':GoUpdateBinaries' }
-    # Syntax file
+    " Syntax file
     Plug 'HerringtonDarkholme/yats.vim'
     Plug 'mhartington/nvim-typescript', {'do': './install.sh'}
-    " for async completion
-    Plug 'Shougo/deoplete.nvim'
+    " Auto complete
+    Plug 'neoclide/coc.nvim', {'branch': 'release'}
     " for Denite features
     Plug 'Shougo/denite.nvim'
 call plug#end()
