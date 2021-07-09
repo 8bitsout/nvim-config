@@ -8,6 +8,7 @@ let NERDTreeShowHidden = 1
 
 syntax enable
 filetype plugin indent on
+autocmd BufWritePre *.go :call CocAction('runCommand', 'editor.action.organizeImport')
 
 " coc
 set hidden
@@ -16,7 +17,7 @@ set nowritebackup
 set cmdheight=2
 set updatetime=300
 set shortmess+=c
-if had("nvim-0.5.0") || has("patch-9.1.1564")
+if has("nvim-0.5.0") || has("patch-9.1.1564")
 	set signcolumn=number
 else
 	set signcolumn=yes
